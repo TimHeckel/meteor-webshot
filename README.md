@@ -16,12 +16,12 @@ You can use webshot to easily grab screenshots within Meteor. Below is a simple 
 
 2. Use the `WEBSHOT` plugin in here
 
-	var _image = "myscreenshot.png";
-	var _res =  WEBSHOT.snap("http://url_to_capture", "public/exports~/" + _image, {
-			screenSize: {
-				width: 300
-				, height: 300
-			});
+		var _image = "myscreenshot.png";
+		var _res =  WEBSHOT.snap("http://url_to_capture", "public/exports~/" + _image, {
+				screenSize: {
+					width: 300
+					, height: 300
+				});
 
 	See the [API documentation](https://npmjs.org/package/webshot) for complete list of `options`
 
@@ -30,23 +30,23 @@ You can use webshot to easily grab screenshots within Meteor. Below is a simple 
 	1. `mrt add router`
 	2. Add this **server** side route (in server code)
 
-		Meteor.Router.add("/render/:id", "GET", function(_image) {
-			var fs = Npm.require("fs")
-				, Future = Npm.require("fibers/future")
-				, future = new Future
-				, cb = future.resolver();
-
-			fs.readFile("public/exports~/" + _image, cb);
-			var _read = future.wait();
-
-			fs.unlink('public/exports~/' + _image, function (err) {
-			  if (err) throw err;
+			Meteor.Router.add("/render/:id", "GET", function(_image) {
+				var fs = Npm.require("fs")
+					, Future = Npm.require("fibers/future")
+					, future = new Future
+					, cb = future.resolver();
+	
+				fs.readFile("public/exports~/" + _image, cb);
+				var _read = future.wait();
+	
+				fs.unlink('public/exports~/' + _image, function (err) {
+				  if (err) throw err;
+				});
+	
+				this.response.setHeader("Content-Type", "application/octet-stream");
+				return [_read];
 			});
-
-			this.response.setHeader("Content-Type", "application/octet-stream");
-			return [_read];
-		});
 
 	3. Once you've called the `WEBSHOT.snap` (step 2), redirect the user to the server side route to prompt the download:
 
-		window.location.href = "/render/" + _image;
+			window.location.href = "/render/" + _image;
