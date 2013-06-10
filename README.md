@@ -27,8 +27,9 @@ You can use webshot to easily grab screenshots within Meteor. Below is a simple 
 
 3. Finally, to prompt the user to download the image, you can use [meteor-router](https://github.com/tmeasday/meteor-router) thusly:
 
-	1. `mrt add router`
-	2. Add this **server** side route (in server code)
+	`mrt add router`
+	
+	Add this **server** side route (in server code)
 
 			Meteor.Router.add("/render/:id", "GET", function(_image) {
 				var fs = Npm.require("fs")
@@ -47,6 +48,6 @@ You can use webshot to easily grab screenshots within Meteor. Below is a simple 
 				return [_read];
 			});
 
-	3. Once you've called the `WEBSHOT.snap` (step 2), redirect the user to the server side route to prompt the download:
+	Once you've called the `WEBSHOT.snap` (step 2), redirect the user to the server side route to prompt the download:
 
 			window.location.href = "/render/" + _image;
