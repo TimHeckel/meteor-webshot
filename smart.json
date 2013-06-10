@@ -1,0 +1,8 @@
+{
+    "name": "webshot",
+    "description": "Webshot - NPM Screenshots using Phantomjs, packaged for Meteor",
+    "homepage": "https://github.com/TimHeckel/meteor-webshot",
+    "author": "Tim Heckel  (http://timheckel.com)",
+    "version": "0.0.1",
+    "git": "https://github.com/TimHeckel/meteor-webshot.git"
+}

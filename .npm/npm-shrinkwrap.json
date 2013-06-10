@@ -1,0 +1,70 @@
+{
+  "dependencies": {
+    "webshot": {
+      "version": "0.5.0",
+      "dependencies": {
+        "phantomjs": {
+          "version": "1.9.0-4",
+          "dependencies": {
+            "adm-zip": {
+              "version": "0.2.1"
+            },
+            "kew": {
+              "version": "0.1.7"
+            },
+            "ncp": {
+              "version": "0.4.2"
+            },
+            "npmconf": {
+              "version": "0.0.24",
+              "dependencies": {
+                "config-chain": {
+                  "version": "1.1.7",
+                  "dependencies": {
+                    "proto-list": {
+                      "version": "1.2.2"
+                    }
+                  }
+                },
+                "inherits": {
+                  "version": "1.0.0"
+                },
+                "once": {
+                  "version": "1.1.1"
+                },
+                "mkdirp": {
+                  "version": "0.3.5"
+                },
+                "osenv": {
+                  "version": "0.0.3"
+                },
+                "nopt": {
+                  "version": "2.1.1",
+                  "dependencies": {
+                    "abbrev": {
+                      "version": "1.0.4"
+                    }
+                  }
+                },
+                "semver": {
+                  "version": "1.1.4"
+                },
+                "ini": {
+                  "version": "1.1.0"
+                }
+              }
+            },
+            "rimraf": {
+              "version": "2.0.3",
+              "dependencies": {
+                "graceful-fs": {
+                  "version": "1.1.14"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
