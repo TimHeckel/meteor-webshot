@@ -14,7 +14,7 @@ You can use webshot to easily grab screenshots within Meteor. Below is a simple 
 1. Ensure you have an image directory with a `~` so that the Meteor framework does not reload the app on file change.
 	`mkdir public/~exports`
 
-2. Use the `WEBSHOT` plugin in here
+2. Use the `WEBSHOT` plugin in your client code:
 
 		var _image = "myscreenshot.png";
 		var _res =  WEBSHOT.snap("http://url_to_capture", "public/exports~/" + _image, {
