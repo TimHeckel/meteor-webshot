@@ -5,7 +5,7 @@ This is a the [node-webshot npm plugin](https://npmjs.org/package/webshot) as a 
 ###How to install?
 
 1. Install [meteorite](https://github.com/oortcloud/meteorite)
-2. `mrt add bootboxjs`
+2. `mrt add webshot`
 
 ###How to use?
 
