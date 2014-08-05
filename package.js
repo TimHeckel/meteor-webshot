@@ -6,4 +6,5 @@ Npm.depends({webshot: "0.5.0"});
 
 Package.on_use(function (api) {
   api.add_files("lib/webshot.js", "server");
+  api.export("WEBSHOT", "server");
 });
